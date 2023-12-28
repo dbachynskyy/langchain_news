@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Categories</title>
+</head>
+<body>
+    <h2>Select News Categories</h2>
+    <form method="post">
+        {% for category in news_categories %}
+            <div>
+                <input type="checkbox" name="category" value="{{ category }}"> {{ category.capitalize() }}
+            </div>
+        {% endfor %}
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

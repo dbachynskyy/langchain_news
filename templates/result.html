@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected CNN News Categories</title>
+</head>
+<body>
+    <h2>Selected Articles</h2>
+    <ul>
+        {% for article in selected_articles %}
+            <li><a href="{{ article.url }}" target="_blank">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Generated Overview</h2>
+    <p>{{ overview }}</p>
+</body>
+</html>
